@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changing Color</title>
+</head>
+
+ <style>
+ 
+ body{
+   background-image: url("guess.jpeg");
+   display: flex;
+   align-items: center;
+   align-content: center;
+   flex-direction: column;
+   
+ }
+ 
+   #box{
+     display: flex;
+     width: 500px;
+     text-align: center;
+     height: 500px;
+     padding: 100px;
+     margin-top: 10px;
+     margin: 100px;
+     background-color: green;
+     
+   }
+   
+   button{
+     color: white;
+     font-size: 30px;
+     border-width: 30px;
+     text-transform: uppercase;
+     padding: 50px;
+     font-family: cursive;
+     background-color: violet;
+     border-radius: 50px;
+   
+   }
+   
+   button:hover{
+     color: black;
+     background-color: yellow;
+     font-family: 'Times New Roman', Times, serif;
+   }
+   
+   
+   p{
+     padding-top: 40px;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 45px;
+     text-align: center;
+     color: black;
+     text-shadow: 0 5px 5px yellow;
+   }
+   
+   h1{
+     font-size: 70px;
+     text-align: center;
+     color: black;
+     text-shadow: 0 5px 30px yellow;
+     text-transform: uppercase;
+     font-weight: bolder;
+     font-style: italic;
+     
+   }
+   
+   
+   
+ </style>
+ 
+<body>
+  <h1> JavaScript colorChanger() Hands On</h1>
+  <p>
+    Can you guess the color what will pop up? <br>---- Click the button below to show what color would pop up! ----
+  </p>
+  <div id="box"></div>
+  <button id="changecolor"> Click Me!</button>
+  <p style="text-transform: uppercase; font-size: 50px;"> Did you guess the color?</p>
+  
+
+<script>
+  const colorBox = document.getElementById("box");
+  let changecolor = document.getElementById("changecolor");
+  
+  changecolor.addEventListener("click", changeColor)
+  
+  function changeColor(){
+    if (colorBox.style.backgroundColor === "green"){
+     colorBox.style.backgroundColor = "blue";
+    }
+    
+    else{
+      colorBox.style.backgroundColor = "green";
+    }
+  }
+  
+  
+  
+  
+  
+</script>
+
+
+
+</body>
+
+</html>
